@@ -1,2 +1,2 @@
 # FilterMags
-Calculate the filter magnitude for a spectra from SDSS.
+Calculate the filter magnitude for spectra from SDSS.
