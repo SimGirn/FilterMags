@@ -53,7 +53,6 @@ def filter_mag(wave_spectra, flux, filter):
     flam = int_3 / int_1 #f_lambda
     pivot = int_2 / int_1 #pivot wavelength squared
     c = 3e18 #angstrom/s
-    # mag = -2.5 * np.log10(flam) - 2.5 * np.log10(pivot / c) - 48.6
-    mag = -2.5 * np.log10(flam) - 48.6
+    mag = -2.5 * np.log10(flam) - 2.5 * np.log10(pivot / c) - 48.6
 
     return mag
