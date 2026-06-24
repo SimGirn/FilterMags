@@ -16,11 +16,13 @@ filter_dict = {
 # read the transmission curve
 class TransmissionCurve:
     """
-    Defines transmission curve objects. Each transmission curve has a filter name and arrays of wavelengths 
-    and transmission (%) based on the transmission curve files in the repo. The dictionary filter_dict
-    contains the file names for each filter.
+    Class that defines transmission curve objects. Each transmission curve has a filter name and arrays of 
+    wavelengths and transmission (%) based on the transmission curve files in the repo. The dictionary 
+    filter_dict contains the file names for each filter.
     """
     def __init__(self, filtername):
+        """Constructor method
+        """
         filename = filter_dict[filtername]
         transmission_data = ascii.read(filename)
         self.wavelength = transmission_data['col1'].data
@@ -29,14 +31,18 @@ class TransmissionCurve:
 
 # calculate filter magnitude
 def filter_mag(wave_spectra, flux, filter):
-    """
-    Function to calculate the filter magnitude for a spectrum provided by the user in a given filter.
-    Inputs: 
-        wave_spectra: the wavelengths of the spectrum (in Angstroms)
-        flux: the associated fluxes for the wavelengths (in erg s-1 cm-2 A-1)
-        filter: the filter that magnitude will be calculated in, identified using a key in filter_dict
-    Outputs: 
-        filter magnitude for the spectrum
+    """Filter magnitude calculator
+
+    Calculate the filter magnitude for a spectrum provided by the user in a given filter.
+    
+    Args: 
+        wave_spectra (array): the wavelengths of the spectrum (in Angstroms)
+        flux (array): the associated fluxes for the wavelengths (in erg s-1 cm-2 A-1)
+        filter (string): the filter that magnitude will be calculated in, identified using a key in 
+        filter_dict
+    
+    Returns: 
+        float: filter magnitude for the spectrum
     """
     # read in the transmission curve for the given filter
     trans_curve = TransmissionCurve(filter)
