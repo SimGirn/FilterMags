@@ -47,11 +47,14 @@ def filter_mag(wave_spectra, flux, filter):
     trans_curve = TransmissionCurve(filter)
     wave_trans = trans_curve.wavelength
     t = trans_curve.transmission
+
+    if max(wave_spectra) < max(wave_trans) or min(wave_spectra) > min(wave_trans):
+        raise ValueError('At least part of filter out of range of spectrum')
     
     # three integrals that are needed for calculation
     int_1 = np.trapezoid(t / wave_trans, wave_trans)
     int_2 = np.trapezoid(t * wave_trans, wave_trans)
-    t_spectra = np.interp(wave_spectra, wave_trans, t) #interpolation for third integral
+    t_spectra = np.interp(wave_spectra, wave_trans, t, left=0, right=0) #interpolation for third integral
     int_3 = np.trapezoid((flux*t_spectra)/wave_spectra, wave_spectra)
 
     # magnitude calculation
