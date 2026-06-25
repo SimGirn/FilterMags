@@ -40,8 +40,8 @@ def read_spectrum(filename):
         filename (string): name of the FITS spectrum file
 
     Returns:
-        wave_spectra (array): wavelength of the spectrum in Angstroms
-        flux (array): flux of the spectrum in erg s-1 cm-2 A-1
+        wave_spectra, flux (arrays): wavelength of the spectrum in Angstroms, flux of the spectrum 
+        in erg s-1 cm-2 A-1
     """
     spectrum_file = fits.open(filename)
     spectrum_data = spectrum_file[1].data
