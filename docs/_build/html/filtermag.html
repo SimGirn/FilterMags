@@ -46,6 +46,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Filter Magnitude Calculator</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#filtermag.TransmissionCurve"><code class="docutils literal notranslate"><span class="pre">TransmissionCurve</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#filtermag.filter_mag"><code class="docutils literal notranslate"><span class="pre">filter_mag()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filtermag.read_spectrum"><code class="docutils literal notranslate"><span class="pre">read_spectrum()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -104,6 +105,25 @@ wavelengths and transmission (%) based on the transmission curve files in the re
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="filtermag.read_spectrum">
+<span class="sig-prename descclassname"><span class="pre">filtermag.</span></span><span class="sig-name descname"><span class="pre">read_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#filtermag.read_spectrum" title="Link to this definition"></a></dt>
+<dd><p>Read SDSS spectrum from FITS</p>
+<p>Function to read an SDSS spectrum from a FITS file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>string</em>) – name of the FITS spectrum file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>wavelength of the spectrum in Angstroms
+flux (array): flux of the spectrum in erg s-1 cm-2 A-1</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>wave_spectra (array)</p>
 </dd>
 </dl>
 </dd></dl>
