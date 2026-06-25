@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: FilterMags
+Version: 0.0.4
+Summary: A package to calculate AB magnitude of a filter given a spectrum.
+Author-email: "Simarpreet Girn, Katherine Panebianco, Yogita Patel" <girn.simarpreet@gmail.com>
+Project-URL: Homepage, https://github.com/SimGirn/FilterMags
+Project-URL: Issues, https://github.com/SimGirn/FilterMags/issues
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astropy
+Requires-Dist: numpy
+Requires-Dist: speclite
+Dynamic: license-file
+
+# FilterMags
+Calculate the AB magnitude in various filters for spectra from SDSS.
+Code Astro project

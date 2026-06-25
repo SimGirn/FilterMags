@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+FilterMags/__init__.py
+FilterMags/filtermag.py
+FilterMags.egg-info/PKG-INFO
+FilterMags.egg-info/SOURCES.txt
+FilterMags.egg-info/dependency_links.txt
+FilterMags.egg-info/requires.txt
+FilterMags.egg-info/top_level.txt

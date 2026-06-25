@@ -4,11 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "FilterMags"
-version = "0.0.1"
+version = "0.0.4"
+authors = [
+  {name = "Simarpreet Girn, Katherine Panebianco, Yogita Patel", email = "girn.simarpreet@gmail.com"}
+]
+
+description = "A package to calculate AB magnitude of a filter given a spectrum."
+readme = "README.md"
+requires-python = ">=3.10"
 
 dependencies = [
-    "os",
     "astropy",
     "numpy",
     "speclite"
 ]
+
+[project.urls]
+Homepage = "https://github.com/SimGirn/FilterMags"
+Issues = "https://github.com/SimGirn/FilterMags/issues"
