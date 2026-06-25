@@ -1,6 +1,7 @@
 # outside packages
 import os
 from astropy.io import ascii
+from astropy.io import fits
 import numpy as np
 
 # dictionary containing keywords for all filter transmission files
@@ -28,6 +29,29 @@ class TransmissionCurve:
         self.wavelength = transmission_data['col1'].data
         self.transmission = transmission_data['col2'].data
         pass
+
+# read SDSS spectrum from a FITS file
+def read_spectrum(filename):
+    """Read SDSS spectrum from FITS
+
+    Function to read an SDSS spectrum from a FITS file.
+
+    Args:
+        filename (string): name of the FITS spectrum file
+
+    Returns:
+        wave_spectra (array): wavelength of the spectrum in Angstroms
+        flux (array): flux of the spectrum in erg s-1 cm-2 A-1
+    """
+    spectrum_file = fits.open(filename)
+    spectrum_data = spectrum_file[1].data
+
+    wave_spectra = 10**spectrum_data['loglam']
+    flux = spectrum_data['flux'] * 1e-17
+
+    spectrum_file.close()
+
+    return wave_spectra, flux
 
 # calculate filter magnitude
 def filter_mag(wave_spectra, flux, filter):
