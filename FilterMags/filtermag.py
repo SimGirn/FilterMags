@@ -3,20 +3,20 @@ import os
 from astropy.io import ascii
 from astropy.io import fits
 import numpy as np
+from __init__ import FILTERDIR
 
 # dictionary containing keywords for all filter transmission files
-current_dir = os.getcwd()
 filter_dict = {
-    "sdss_u": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.u.dat'),
-    "sdss_uprime": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.uprime_filter.dat'),
-    "sdss_g": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.g.dat'),
-    "sdss_gprime": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.gprime_filter.dat'),
-    "sdss_r": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.r.dat'),
-    "sdss_rprime": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.rprime_filter.dat'),
-    "sdss_i": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.i.dat'),
-    "sdss_iprime": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.iprime_filter.dat'),
-    "sdss_z": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.z.dat'),
-    "sdss_zprime": os.path.join(current_dir, 'TransmissionCurves/SLOAN_SDSS.zprime_filter.dat'),
+    "sdss_u": os.path.join(FILTERDIR, 'SLOAN_SDSS.u.dat'),
+    "sdss_uprime": os.path.join(FILTERDIR, 'SLOAN_SDSS.uprime_filter.dat'),
+    "sdss_g": os.path.join(FILTERDIR, 'SLOAN_SDSS.g.dat'),
+    "sdss_gprime": os.path.join(FILTERDIR, 'SLOAN_SDSS.gprime_filter.dat'),
+    "sdss_r": os.path.join(FILTERDIR, 'SLOAN_SDSS.r.dat'),
+    "sdss_rprime": os.path.join(FILTERDIR, 'SLOAN_SDSS.rprime_filter.dat'),
+    "sdss_i": os.path.join(FILTERDIR, 'SLOAN_SDSS.i.dat'),
+    "sdss_iprime": os.path.join(FILTERDIR, 'SLOAN_SDSS.iprime_filter.dat'),
+    "sdss_z": os.path.join(FILTERDIR, 'SLOAN_SDSS.z.dat'),
+    "sdss_zprime": os.path.join(FILTERDIR, 'SLOAN_SDSS.zprime_filter.dat'),
 }
 
 # read the transmission curve
