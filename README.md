@@ -1,9 +1,9 @@
 # FilterMags
-The `FiterMags` is a python package to calculate the AB magnitude of an astronomical object in various filters for spectra from SDSS (add link of the paper). Code/Astro Project.
+The `FiterMags` is a python package to calculate the AB magnitude of an astronomical object in various filters for spectra from SDSS. Code/Astro Project.
 
 ## How to install and run FilterMags??
 
-The FilterMags can be installed using the `pip` or by fllowing the link (on Pypi link )
+The FilterMags can be installed using the `pip` or by following the link (on Pypi link)
 
 ```bash
 !pip install FilterMags==0.0.4
