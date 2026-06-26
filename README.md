@@ -6,7 +6,7 @@
 
 `FilterMags` is a Python package designed to calculate the AB magnitude of an astronomical object in various filters for spectra data from the Sloan Digital Sky Survey (SDSS). For the mathematical details regarding the photometric system we used, see the [pyphot photometry documentation](https://mfouesneau.github.io/pyphot/photometry.html).
 
-For installation instructions, tutorials and detailed documentation, start [here](read the docs link)
+For installation instructions, tutorials and detailed documentation, start [here](https://filtermags.readthedocs.io/en/latest/)
 
 ## How to install and run FilterMags?
 
