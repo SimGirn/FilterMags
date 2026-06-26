@@ -19,6 +19,9 @@ dependencies = [
     "speclite"
 ]
 
+[tool.setuptools]
+packages = ["FilterMags"]
+
 [project.urls]
 Homepage = "https://github.com/SimGirn/FilterMags"
 Issues = "https://github.com/SimGirn/FilterMags/issues"
