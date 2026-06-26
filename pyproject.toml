@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "FilterMags"
-version = "0.0.4"
+version = "0.0.5"
 authors = [
   {name = "Simarpreet Girn, Katherine Panebianco, Yogita Patel", email = "girn.simarpreet@gmail.com"}
 ]
