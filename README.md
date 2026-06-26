@@ -10,10 +10,10 @@ For installation instructions, tutorials and detailed documentation, start [here
 
 ## How to install and run FilterMags?
 
-`FilterMags` can be installed using the `pip` command or by following this link: https://pypi.org/project/FilterMags/0.0.6/
+`FilterMags` can be installed using the `pip` command or by following this link: https://pypi.org/project/FilterMags/0.0.8/
 
 ```bash
-!pip install FilterMags==0.0.6
+!pip install FilterMags==0.0.8
 ```
 
 To run it we need to import the package as follows:
